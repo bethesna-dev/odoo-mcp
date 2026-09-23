@@ -1,0 +1,21 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><style>
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 34px; width: 900px; position: relative; z-index: 1; }
+.t { background: #fff; border: 1px solid #e6e1d8; border-radius: 14px; padding: 16px 20px; }
+.t code { font-family: "DejaVu Sans Mono", Menlo, monospace; font-size: 18px; font-weight: 600; }
+.t p { font-size: 15px; color: #5b564e; margin-top: 6px; }
+.tag { float: right; font-size: 12px; font-weight: 700; letter-spacing: .5px; border-radius: 999px; padding: 3px 10px; background: #eef0ea; color: #4a4640; }
+.tag.w { background: #b5f36b; color: #1f1d1a; }
+</style></head><body><div class="blob"></div>
+<div class="top"><div class="brand"><svg viewBox="0 0 208 121"><path d="M69.23,120.07H0s10.77-18.79,10.77-18.79c7.35-12.81,20.24-21.03,35.15-21.22l34.44.02c7.29,0,13.89-3.43,17.53-9.78l5.82-10.16-69.12-.02,10.81-18.81c7.1-12.36,19.45-20.61,33.88-21.1l36.27-.03c7.76,0,14.04-4.68,17.81-11.16L138.47.21h69.18s-11.06,19.26-11.06,19.26c-7.2,12.54-19.95,20.46-34.51,20.74l-36.27.09c-6.45.02-12.6,3.75-15.72,9.18l-6.15,10.68h69.12s-11.08,19.26-11.08,19.26c-6.96,12.09-19.14,20-33.22,20.65l-36.66.05c-6.65,0-13.02,3.26-16.34,8.88l-6.53,11.07Z"/></svg>Odoo MCP</div><div class="pill">BY SOLIDUM.TECH</div></div>
+<h1>Odoo direkt im Editor.</h1>
+<div class="sub">Sechs Tools über XML-RPC. Schreiben nur mit ODOO_ALLOW_WRITES=1.</div>
+<div class="grid">
+<div class="t"><span class="tag">LESEN</span><code>list_models</code><p>Installierte Modelle finden</p></div>
+<div class="t"><span class="tag">LESEN</span><code>get_model_schema</code><p>Felder eines Modells verstehen</p></div>
+<div class="t"><span class="tag">LESEN</span><code>search_records</code><p>Suchen mit Odoo-Domain, max. 200</p></div>
+<div class="t"><span class="tag">LESEN</span><code>get_record</code><p>Einen Datensatz lesen</p></div>
+<div class="t"><span class="tag w">SCHREIBEN</span><code>create_record</code><p>Entwurf anlegen, z.B. Lieferantenrechnung</p></div>
+<div class="t"><span class="tag w">SCHREIBEN</span><code>update_record</code><p>Felder gezielt ergänzen</p></div>
+</div>
+<div class="foot">Kein Löschen, keine freien Methodenaufrufe. <b>solidum.tech</b></div>
+</body></html>

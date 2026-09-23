@@ -1,15 +1,21 @@
 {
   "name": "solidum-odoo",
-  "displayName": "Solidum Odoo Connector",
-  "version": "0.1.0",
-  "description": "Search, read, and (optionally) create/update Odoo records from Cursor via MCP.",
+  "displayName": "Odoo MCP by Solidum",
+  "version": "0.2.0",
+  "description": "Odoo ERP connector (MCP over XML-RPC) with accounting skills for vendor bills, bank matching and Stripe fees. Built and maintained by Solidum (solidum.tech).",
   "author": {
     "name": "Solidum",
-    "email": "solidum@agentmail.to"
+    "email": "solidum@agentmail.to",
+    "url": "https://solidum.tech"
   },
-  "homepage": "https://github.com/bethesna-dev/odoo-mcp",
+  "homepage": "https://solidum.tech",
   "repository": "https://github.com/bethesna-dev/odoo-mcp",
   "license": "MIT",
-  "keywords": ["odoo", "erp", "mcp", "solidum"],
-  "mcpServers": "./mcp.json"
+  "logo": "assets/logo.svg",
+  "keywords": ["odoo", "erp", "accounting", "buchhaltung", "mcp", "stripe", "solidum"],
+  "mcpServers": "./mcp.json",
+  "rules": "./rules/",
+  "skills": "./skills/",
+  "agents": "./agents/",
+  "commands": "./commands/"
 }

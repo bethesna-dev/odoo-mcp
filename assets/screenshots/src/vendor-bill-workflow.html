@@ -1,0 +1,25 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><style>
+.flow { display: flex; align-items: stretch; gap: 0; margin-top: 44px; position: relative; z-index: 1; }
+.s { background: #fff; border: 1px solid #e6e1d8; border-radius: 16px; padding: 22px 20px; width: 232px; }
+.s.gate { background: #b5f36b; border-color: #b5f36b; }
+.n { font-size: 14px; font-weight: 700; letter-spacing: .6px; color: #6b665d; }
+.s.gate .n { color: #1f1d1a; }
+.s h3 { font-size: 23px; margin-top: 8px; letter-spacing: -.3px; }
+.s ul { list-style: none; margin-top: 12px; font-size: 15px; color: #4a4640; line-height: 1.6; }
+.s.gate ul { color: #1f1d1a; }
+.arr { width: 30px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #8a847a; }
+</style></head><body><div class="blob"></div>
+<div class="top"><div class="brand"><svg viewBox="0 0 208 121"><path d="M69.23,120.07H0s10.77-18.79,10.77-18.79c7.35-12.81,20.24-21.03,35.15-21.22l34.44.02c7.29,0,13.89-3.43,17.53-9.78l5.82-10.16-69.12-.02,10.81-18.81c7.1-12.36,19.45-20.61,33.88-21.1l36.27-.03c7.76,0,14.04-4.68,17.81-11.16L138.47.21h69.18s-11.06,19.26-11.06,19.26c-7.2,12.54-19.95,20.46-34.51,20.74l-36.27.09c-6.45.02-12.6,3.75-15.72,9.18l-6.15,10.68h69.12s-11.08,19.26-11.08,19.26c-6.96,12.09-19.14,20-33.22,20.65l-36.66.05c-6.65,0-13.02,3.26-16.34,8.88l-6.53,11.07Z"/></svg>Odoo MCP</div><div class="pill">BY SOLIDUM.TECH</div></div>
+<h1>Lieferantenrechnungen, sauber vorbereitet.</h1>
+<div class="sub">Skills aus echter Buchhaltungspraxis. Der Mensch gibt frei, nicht das Modell.</div>
+<div class="flow">
+<div class="s"><div class="n">1 · LESEN</div><h3>Entwürfe finden</h3><ul><li>account.move, state=draft</li><li>in_invoice / in_refund</li><li>PDF vorhanden?</li></ul></div>
+<div class="arr">→</div>
+<div class="s"><div class="n">2 · PRÜFEN</div><h3>Lücken zeigen</h3><ul><li>Partner, Konto, Steuer</li><li>Datum, Betrag, Analytik</li><li>Vorher / Nachher</li></ul></div>
+<div class="arr">→</div>
+<div class="s gate"><div class="n">3 · FREIGABE</div><h3>Rückfrage</h3><ul><li>Bei Unklarheit fragen</li><li>Steuer mehrdeutig</li><li>Ungewöhnlich hoch</li></ul></div>
+<div class="arr">→</div>
+<div class="s"><div class="n">4 · ENTWURF</div><h3>Vervollständigen</h3><ul><li>update_record</li><li>Bleibt Entwurf</li><li>Buchen nur mit OK</li></ul></div>
+</div>
+<div class="foot">Kein Erfinden von Beträgen, Partnern oder Steuern. <b>solidum.tech</b></div>
+</body></html>

@@ -1,7 +1,7 @@
 [project]
 name = "odoo-mcp"
-version = "0.1.0"
-description = "Solidum Odoo connector: MCP server for Odoo over XML-RPC (Cursor marketplace plugin)"
+version = "0.2.0"
+description = "Odoo MCP by Solidum (solidum.tech): MCP server for Odoo over XML-RPC, with accounting skills (Cursor marketplace plugin)"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"

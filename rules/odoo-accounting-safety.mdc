@@ -1,0 +1,44 @@
+---
+description: Safety rules for any accounting work in Odoo through the odoo MCP tools (account.move, account.move.line, account.payment, account.bank.statement.line, Stripe payouts).
+alwaysApply: true
+---
+
+# Odoo accounting safety
+
+These rules apply whenever you read or change accounting data through the `odoo` MCP server.
+
+## Data
+
+- Never invent amounts, partners, accounts, tax codes, dates or invoice numbers. Every value you write must come from Odoo, from an attached document, or from the user.
+- If a value is missing or unclear, say so and ask. An empty field is better than a guessed one.
+- Look up ids (`res.partner`, `account.account`, `account.tax`, `account.analytic.account`) with `search_records` before using them. Never reuse an id from memory or from another database.
+
+## Draft before post
+
+- Work on drafts (`state = draft`). The connector cannot post, reconcile or cancel moves; that happens in Odoo by a person.
+- Never call `update_record` on a move with `state = posted` or `cancel`. If a posted move looks wrong, report it and propose a correction for a human to do.
+- Never reverse, delete or reset a posted entry silently. Reversals and write-offs always need an explicit "ja, machen" from the user.
+
+## Ask first (Freigabe)
+
+Stop and ask before writing when any of these apply:
+
+- The amount is large or unusual for this partner (e.g. clearly above earlier bills, or above a threshold the user named).
+- The tax treatment is ambiguous: reverse charge, foreign vendor, mixed rates, private share, missing VAT id.
+- The change is a write-off, discount, rounding difference or currency difference.
+- Two or more partners, invoices or payments fit equally well.
+- The document and the Odoo record disagree (amount, date, IBAN, vendor name).
+
+## Payment providers
+
+- Stripe, PayPal and similar providers pay out net amounts. Never book a payout net as revenue. Split into gross revenue, provider fees and the transfer to the bank. See the `stripe-fee-booking` skill.
+
+## Secrets
+
+- Never print, log or echo `ODOO_API_KEY`, `ODOO_PASSWORD`, bank credentials, Stripe keys or tokens, not even partially.
+- Do not write secrets into files, commits, chat messages or Odoo notes. Refer to env var names instead.
+
+## Reporting
+
+- Report numbers first: what you found, what you changed (before / after), what is still open.
+- Link records by model and id (e.g. `account.move 1234`) so the user can find them in Odoo.

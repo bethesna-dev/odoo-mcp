@@ -2,16 +2,26 @@
   "name": "solidum",
   "owner": {
     "name": "Solidum",
-    "email": "solidum@agentmail.to"
+    "email": "solidum@agentmail.to",
+    "url": "https://solidum.tech"
   },
   "metadata": {
-    "description": "Solidum connectors for Cursor"
+    "description": "Cursor plugins by Solidum (solidum.tech): software takeover, stabilisation and further development.",
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "solidum-odoo",
       "source": "./",
-      "description": "Odoo ERP connector (MCP server over XML-RPC)"
+      "version": "0.2.0",
+      "description": "Odoo ERP connector (MCP over XML-RPC) with accounting skills. By solidum.tech.",
+      "author": { "name": "Solidum", "url": "https://solidum.tech" },
+      "homepage": "https://solidum.tech",
+      "repository": "https://github.com/bethesna-dev/odoo-mcp",
+      "license": "MIT",
+      "category": "erp",
+      "tags": ["erp", "accounting", "mcp", "odoo"],
+      "keywords": ["odoo", "erp", "accounting", "buchhaltung", "mcp", "stripe"]
     }
   ]
 }
