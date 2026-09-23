@@ -4,3 +4,6 @@ __pycache__/
 .pytest_cache/
 dist/
 .env
+
+# Box-local launchers that read private secret stores
+scripts/grokbot-odoo-mcp.sh
