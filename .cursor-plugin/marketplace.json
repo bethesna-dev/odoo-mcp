@@ -1,0 +1,17 @@
+{
+  "name": "solidum",
+  "owner": {
+    "name": "Solidum",
+    "email": "solidum@agentmail.to"
+  },
+  "metadata": {
+    "description": "Solidum connectors for Cursor"
+  },
+  "plugins": [
+    {
+      "name": "solidum-odoo",
+      "source": "./",
+      "description": "Odoo ERP connector (MCP server over XML-RPC)"
+    }
+  ]
+}
